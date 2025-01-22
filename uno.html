@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNO Card Flip Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 20px;
+      perspective: 1000px;
+    }
+
+    .card {
+      width: 200px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-front {
+      background: #ff0000;
+    }
+
+    .card-back {
+      background: #0000ff;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-face card-front">
+        UNO
+      </div>
+      <div class="card-face card-back">
+        +4
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-face card-front">
+        UNO
+      </div>
+      <div class="card-face card-back">
+        2
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-face card-front">
+        UNO
+      </div>
+      <div class="card-face card-back">
+        5
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-face card-front">
+        UNO
+      </div>
+      <div class="card-face card-back">
+        7
+      </div>
+    </div>
+  </div>
+</body>
+</html>
